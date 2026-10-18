@@ -1,0 +1,40 @@
+{
+  "name": "emoji-engine-3d",
+  "version": "0.1.0",
+  "description": "A small 3D WebGL engine for emoji-native games. The supplement to emoji-engine-2d.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "browser",
+    "src",
+    "examples",
+    "ARCHITECTURE.md",
+    "CHANGES.md",
+    "INTERFACES.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node build.js",
+    "prepare": "npm run build",
+    "demo": "npm run build && node examples/demo.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.2"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
